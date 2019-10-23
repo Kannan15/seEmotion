@@ -1,0 +1,25 @@
+<ons-dialog var="rogin" modifier="material" cancelable>
+  <div class="Dialog">
+    <div class="DialogTitle">
+      <div class="center" style="text-align: center;">
+        ログイン
+      </div>
+    </div>
+    <div class="DialogBody" id="loginBody">
+      <p>ユーザ名</p>
+      <ons-input id="jsi-name" modifier="underbar" placeholder="UserName" float onkeypress="loginDialog.onKeyPress(event,'userName')"></ons-input>
+
+      <p>パスワード</p>
+      <ons-input id="jsi-password" type="password" modifier="underbar"
+        placeholder="password" float onkeypress="loginDialog.onKeyPress(event,'password')"></ons-input>
+        
+      <ons-button onclick="loginDialog.callRegisterPage()" id="callregister">
+        会員登録
+      </ons-button>
+
+      <ons-button onclick="loginDialog.Login()" id="decision">
+        ログイン
+      </ons-button>
+    </div>
+  </div>
+</ons-dialog>

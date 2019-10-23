@@ -1,0 +1,25 @@
+<ons-page id="splitter">
+  <ons-list id="splitterList">
+   <ons-list-item onclick="ReadyPage.setBodyContent();" data-enable="always" tappable>
+      ホーム
+    </ons-list-item>
+
+    <ons-list-item id="splitterLogin" onclick="loginDialog.open()" data-enable="duringLogout" tappable>
+      ログイン
+    </ons-list-item>
+
+    <ons-list-item id="splitterLogout" onclick="logout()" data-enable="duringLogin" tappable>
+      ログアウト
+    </ons-list-item>
+
+    <ons-list-item id="reInstallDict" onclick="Dict.reFetchData()" data-enable="always" tappable>
+      辞書再インストール
+    </ons-list-item>
+  </ons-list>
+  <div id="displayBox">
+    <img id="displayIcon" src="http://placekitten.com/32/32" alt="">
+    <p id="displayUserName"></p>
+  </div>
+  <ons-list id="otherUsers" style="height: 50%; overflow-y: scroll; overflow-x: hidden;">
+  </ons-list>
+</ons-page>

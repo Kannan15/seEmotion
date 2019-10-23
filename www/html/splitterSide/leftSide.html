@@ -1,0 +1,17 @@
+<ons-page id="splitter">
+  <ons-list id="splitterList">
+    <ons-list-item id="splitterAddRoom" onclick="addRoomDialog.open()" data-enable="duringLogin">
+      ルームを追加
+    </ons-list-item>
+
+    <ons-list-item id="addNewWord" onclick="addWordDialog.open()" data-enable="always" tappable>
+      単語追加
+    </ons-list-item>
+
+    <ons-list-item id="clear" onclick="localStorage.clear()" data-enable="always" style="position: absolute; bottom: 10%;" tappable>
+      デバッグ用、ストレージの初期化
+    </ons-list-item>
+
+    <div id="List" class="ExpandableContent"></div>
+  </ons-list>
+</ons-page>

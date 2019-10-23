@@ -1,0 +1,30 @@
+<ons-dialog id="addWorsd" modifier="material" cancelable>
+  <div class="Dialog">
+    <div class="DialogTitle">
+      <div class="center" style="text-align: center;">
+        単語追加
+      </div>
+    </div>
+    <div class="DialogBody" id="addWordBody">
+      <p>単語</p>
+      <ons-input id="getSurface" modifier="underbar" placeholder="surface" onfocus="addWordDialog.onFocusInput(this,'surface')" onblur="addWordDialog.check(event, 'surface')" onkeypress="addWordDialog.onKeyPress(event,'surface')"></ons-input>
+
+      <p>読み(ヨミ)</p>
+      <ons-input id="getReading" modifier="underbar" placeholder="reading" onfocus="addWordDialog.onFocusInput(this,'reading')" onblur="addWordDialog.check(event, 'read')" onkeypress="addWordDialog.onKeyPress(event,'read')"></ons-input>
+
+      <p>極性値: <span class="posOutput" onclick="inputRank()">0</span></p>
+      <ons-range id="getRank" min="-1" max="1" value="0" step="0.001" style="width: 100%" oninput="posChanged(this.value)"></ons-range>
+
+      <ons-select name="PosSelector" id="getNewPos" onkeypress="addWordDialog.onKeyPress(event,'pos')">
+        <option>動詞</option>
+        <option>名詞</option>
+        <option>形容詞</option>
+        <option>形容動詞</option>
+      </ons-select>
+      
+      <ons-button id="decision" onclick="addWordDialog.addWord()">
+        単語追加
+      </ons-button>
+    </div>
+  </div>
+</ons-dialog>

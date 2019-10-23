@@ -1,0 +1,66 @@
+<ons-page id="room">
+  <ons-toolbar>
+    <div class="left">
+      <ons-toolbar-button onclick="fn.open('menu')">
+        <ons-icon icon="md-menu" class="menu-button"></ons-icon>
+      </ons-toolbar-button>
+    </div>
+    <div class="right">
+      <ons-toolbar-button onclick="fn.open('sub')">
+        <ons-icon icon="md-menu" class="menu-button"></ons-icon>
+      </ons-toolbar-button>
+    </div>
+<!--
+    <div class="right">
+      <ons-select id="tag-display" onchange="editSelects(event)">
+        <option value="general">All</option>
+        <option value="bug">Bug</option>
+        <option value="help">Succeed</option>
+        <option value="issue">Issue</option>
+      </ons-select>
+    </div>
+-->
+    <div class="center" id="RoomTitle">
+      <div class="swiper-Name"></div>
+      <div class="swiper-Id" onclick="onClickSwipeId()"></div>
+      <div class="swiper-Button" onclick="swipe()">
+        <ons-icon icon="md-chevron-right"></ons-icon>
+      </div>
+    </div>
+  </ons-toolbar>
+
+  <ons-bottom-toolbar>
+    <textarea id="jsi-msg" modifier="underbar" placeholder="Message" onkeypress="textInputerEvent(event)" oninput="setHeight()"></textarea>
+
+    <ons-select id="jsi-emo" onchange="addEmotion(event)">
+      <option value="0">極性</option>
+      <option value="1">positive</option>
+      <option value="-1">negative</option>
+    </ons-select>
+
+  <!--
+    <ons-select id="jsi-tag" onchange="addDetail(event)">
+      <option value="general">タグ</option>
+      <option value="bug">Bug</option>
+      <option value="help">succeed</option>
+      <option value="issue">issue</option>
+    </ons-select>
+  -->
+    <ons-button modifier="quiet" name="button" class="send-button" onclick="confirmationDialog.confirm()">
+      <ons-icon icon="send" size="20px" class="send-icon"></ons-icon>
+    </ons-button>
+  </ons-bottom-toolbar>
+
+  <body>
+    <div id="pickup" class="ExpandableContent"></div>
+
+    <!-- チャット内容が動的に生成される部分 -->
+    <div style="overflow: hidden;">
+      <ons-list-header>チャット内容</ons-list-header>
+      <ons-list style="overflow-y: scroll;" id="jsi-board" onscroll="scrollHis()"></ons-list>
+    </div>
+    <div id="jumpLastMessage" onclick="jumpLastMsg()">
+      <ons-icon icon="arrow-down" size="20px"></ons-icon>
+    </div>
+  </body>
+</ons-page>

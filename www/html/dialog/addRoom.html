@@ -1,0 +1,18 @@
+<ons-dialog var="addRoom" modifier="material" cancelable>
+  <div class="Dialog">
+    <div class="DialogTitle">
+        <div class="center" style="text-align: center;">
+          ルームを追加
+        </div>
+    </div>
+    <div class="DialogBody" id="addRoomBody">
+      <ons-button id="join" onclick="addRoomDialog.callJRoomPage()">
+        既にあるルームに参加する
+      </ons-button>
+      
+      <ons-button id="create" onclick="addRoomDialog.callCRoomPage()">
+        新しいルームを作成する
+      </ons-button>
+    </div>
+  </div>
+</ons-dialog>

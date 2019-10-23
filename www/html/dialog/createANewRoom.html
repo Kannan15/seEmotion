@@ -1,0 +1,16 @@
+<ons-dialog var="createANewRoom" modifier="material" cancelable>
+  <div class="Dialog">
+    <div class="DialogTitle">
+      <div class="center" style="text-align:center">
+        新しいルームを作成する
+      </div>
+    </div>
+    <div class="DialogBody" id="createANewRoomBody">
+      <ons-input id="roomName" modifier="underbar" placeholder="roomName" onkeypress="createANewRoomDialog.onKeyPress(event)"></ons-input>
+
+      <ons-button id="decision" onclick="createANewRoomDialog.createRoom()">
+        新規作成
+      </ons-button>
+    </div>
+  </div>
+</ons-dialog>

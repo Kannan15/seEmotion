@@ -1,0 +1,20 @@
+<ons-dialog var="register" modifier="material" cancelable>
+  <div class="Dialog">
+    <div class="DialogTitle">
+      <div class="center" style="text-align:center">
+          新規登録
+      </div>
+    </div>
+    <div class="DialogBody" id="registerBody">
+      <p>ユーザーID</p>
+      <ons-input id="userId" modifier="underbar" placeholder="userId" onkeypress="registerDialog.onKeyPress(event,'userId')"></ons-input>
+
+      <p>パスワード</p>
+      <ons-input id="password" modifier="underbar" type="password" placeholder="password" onkeypress="registerDialog.onKeyPress(event,'password')"></ons-input>
+      
+      <ons-button id="decision" onclick="registerDialog.Register()">
+        登録
+      </ons-button>
+    </div>
+  </div>
+</ons-dialog>

@@ -1,0 +1,31 @@
+#displayBox {
+  z-index: 2;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  height: 48px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+#displayIcon {
+  border-radius: 16px;
+}
+
+#displayUserName {
+  margin-left: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* roomlist */
+#List {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+#otherUsers {
+  display: none;
+}

@@ -1,0 +1,16 @@
+<ons-dialog var="joinARoom" modifier="material" cancelable>
+  <div class="Dialog">
+    <div class="DialogTitle">
+      <div class="center" style="text-align:center">
+        既存のルームに参加する
+      </div>
+    </div>
+    <div class="DialogBody" id="joinARoomBody">
+      <ons-input id="roomId" modifier="underbar" placeholder="roomId" onkeypress="joinARoomDialog.onKeyPress(event)"></ons-input>
+      
+      <ons-button onclick="joinARoomDialog.joinRoom()" id="decision">
+        参加
+      </ons-button>
+    </div>
+  </div>
+</ons-dialog>
